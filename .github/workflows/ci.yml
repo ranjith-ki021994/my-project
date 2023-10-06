@@ -29,6 +29,11 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Publish to Nexus
+      run: ./gradlew publish -PnexusUsername=${{ secrets.NEXUS_USERNAME }} -PnexusPassword=${{ secrets.NEXUS_PASSWORD }}
+      env:
+        CI: true
+
 
 
 
