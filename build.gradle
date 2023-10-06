@@ -11,12 +11,13 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral{
-        url = uri(https://nexus.xebialabs.com/nexus/content/repositories/releases/com/xebialabs/xldeploy/test-app/)
+        url = uri("https://nexus.xebialabs.com/nexus/content/repositories/releases/com/xebialabs/xldeploy/test-app/")
         credentials {
                 username = project.findProperty("rkumars") ?: System.getenv("NEXUS_USERNAME")
                 password = project.findProperty("Ran252525!") ?: System.getenv("NEXUS_PASSWORD")
             }
     }
+    
 }
 
 dependencies {
