@@ -31,8 +31,8 @@ publishing {
         maven {
             url = uri("https://nexus.xebialabs.com/nexus/content/repositories/releases/com/xebialabs/")
             credentials {
-                username = "rkumars"
-                password = "Ran252525!"
+                username = "nexus-ci"
+                password = "1j5dUa1NVGwx"
             }
         }
 }
