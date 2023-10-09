@@ -31,8 +31,8 @@ publishing {
         maven {
             url = uri("https://nexus.xebialabs.com/nexus/content/repositories/releases/com/xebialabs/xldeploy/test-app/")
             credentials {
-                username = project.findProperty("nexusUsername") ?: System.getenv("NEXUS_USERNAME")
-                password = project.findProperty("nexusPassword") ?: System.getenv("NEXUS_PASSWORD")
+                username = nexusUsername
+                password = nexusPassword
             }
         }
     }
