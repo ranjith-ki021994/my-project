@@ -5,7 +5,7 @@ plugins {
     id 'maven-publish'
 }
 
-group 'com.example'
+group 'com.xebialabs'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
