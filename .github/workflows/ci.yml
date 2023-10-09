@@ -26,6 +26,12 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+    
+    - name: Debug Secrets
+      run: |
+        echo "NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}"
+        echo "NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}"
+
 
     - name: Build with Gradle
       run: ./gradlew build
