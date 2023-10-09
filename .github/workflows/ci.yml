@@ -35,8 +35,12 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Publish to Nexus
-      run: ./gradlew publish -PnexusUsername=${{ secrets.NEXUS_USERNAME }} -PnexusPassword=${{ secrets.NEXUS_PASSWORD }} --stacktrace
+    - name: Set up Gradle Properties
+      run: echo "nexusUsername=${{ secrets.NEXUS_USERNAME }}" >> gradle.properties && echo "nexusPassword=${{ secrets.NEXUS_PASSWORD }}" >> gradle.properties
+
+    - name: Build and Publish
+      run: ./gradlew publish --info
+
       env:
         CI: true
 
