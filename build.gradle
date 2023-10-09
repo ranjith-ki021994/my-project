@@ -29,10 +29,10 @@ publishing {
 
     repositories {
         maven {
-            url = uri("https://nexus.xebialabs.com/nexus/content/repositories/releases/com/xebialabs/deployit/")
+            url = uri("https://nexus.xebialabs.com/nexus/content/repositories/public/")
             credentials {
-                username = "admin"
-                password = "nLpHIstNA4vx"
+                username = "rkumars"
+                password = "Ran252525!"
             }
         }
 }
