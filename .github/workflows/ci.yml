@@ -39,7 +39,7 @@ jobs:
       run: echo "nexusUsername=${{ secrets.NEXUS_USERNAME }}" >> gradle.properties && echo "nexusPassword=${{ secrets.NEXUS_PASSWORD }}" >> gradle.properties
 
     - name: Build and Publish
-      run: ./gradlew publish --info
+      run: ./gradlew publish -PnexusUsername=${{ secrets.NEXUS_USERNAME }} -PnexusPassword=${{ secrets.NEXUS_PASSWORD }} --debug
 
       env:
         CI: true
