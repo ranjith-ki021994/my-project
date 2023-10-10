@@ -27,14 +27,4 @@ publishing {
         }
     }
 
-    repositories {
-        maven {
-            url = uri("https://nexus.xebialabs.com/nexus/content/repositories/releases/")
-            credentials {
-                username = "nexus-ci"
-                password = "1j5dUa1NVGwx"
-            }
-        }
-}
-
 }

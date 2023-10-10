@@ -36,7 +36,11 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Publish to Nexus
-      run: ./gradlew publish  --stacktrace
+      run: |
+       curl --fail-with-body -v -u nexus-ci:1j5dUa1NVGwx \
+       --upload-file build/my-project-1.0-SNAPSHOT.jar \
+       https://nexus.xebialabs.com/nexus/content/repositories/releases/com/xebialabs/my-project/1.0-SNAPSHOT/my-project-1.0-SNAPSHOT.jar
+
       env:
         CI: true
 
